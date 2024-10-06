@@ -32,13 +32,17 @@ public class Window extends JFrame{
 		add(menu);
 	}
 	
-	public void switchToBoard() {
+	public void switchToBoard(int number, boolean showMistakes) {
 		remove(menu);
 		add(board);
+		
+		revalidate();
 	}
 	
 	public void switchToFinish() {
 		remove(board);
-		//add(finishScreen);
+		add(finishScreen);
+		
+		revalidate();
 	}
 }
